@@ -1,15 +1,14 @@
-FROM node:16
+FROM node:lts AS build
 
-# Create app directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
-# Install app dependencies
-COPY package*.json ./
-
-RUN npm install
-
-# Bundle app source
 COPY . .
 
-EXPOSE 8080
-CMD [ "node", "server.js" ]
+RUN npm i
+RUN npm run build
+
+FROM httpd:2.4 AS runtime
+
+COPY --from=build /app/dist /usr/local/apache2/htdocs/
+
+EXPOSE 80
