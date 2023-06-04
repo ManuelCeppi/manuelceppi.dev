@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  blog:
+    container_name: blog    
+    image: "arm64v8/node:lts"
+    working_dir: /blog
+    volumes:
+      - ./:/blog:delegated
+      - ./entrypoint-blog.sh:/entrypoint-blog.sh
+    entrypoint: /entrypoint-blog.sh
+    ports:
+      - 3000:3000
+    expose: 
+      - 3000 
+    healthcheck: 
+      test: [”CMD-SHELL", "curl localhost"]
