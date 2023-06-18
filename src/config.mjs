@@ -1,15 +1,14 @@
 import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
-  name: 'AstroWind',
+  name: 'Manuel Ceppi',
 
   origin: 'https://astrowind.vercel.app',
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'AstroWind — Free template for create a website with Astro + Tailwind CSS',
-  description:
-    '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
+  title: 'Manuel Ceppi | Pretending to be a Developer',
+  description: 'Myself, some tech posts and so on',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
@@ -55,7 +54,6 @@ const CONFIG = {
       disabled: false,
     },
   },
-
 };
 
 export const SITE = { ...CONFIG, blog: undefined };
