@@ -1,0 +1,37 @@
+---
+import { BLOG } from '~/config.mjs';
+
+import Layout from '~/layouts/PageLayout.astro';
+import SinglePost from '~/components/blog/SinglePost.astro';
+import ToBlogLink from '~/components/blog/ToBlogLink.astro';
+
+import { getCanonical, getPermalink } from '~/utils/permalinks';
+import { fetchPosts } from '~/utils/blog';
+import { findImage } from '~/utils/images';
+import Hero from '~/components/widgets/Hero.astro';
+import Headline from '~/components/blog/Headline.astro';
+
+// export async function getStaticPaths() {
+//   if (BLOG?.disabled || BLOG?.post?.disabled) return [];
+//   return (await fetchPosts()).map((post) => ({
+//     params: {
+//       blog: post.permalink,
+//     },
+//     props: { post },
+//   }));
+// }
+
+const meta = {
+  title: 'HOBBIES.title', // FIXME
+  description: 'HOBBIES.description', // FIXME
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+    <Headline subtitle="Work in progress. Stay tuned.">Hobbies</Headline>
+    <!-- <BlogList posts={page.data} />
+        <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} /> -->
+  </section>
+</Layout>

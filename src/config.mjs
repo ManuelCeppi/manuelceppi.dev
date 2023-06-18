@@ -31,14 +31,14 @@ const CONFIG = {
     disabled: false,
     postsPerPage: 4,
 
-    post: {
-      permalink: '/%slug%', // Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+    list: {
+      pathname: '/blog-articles', // Blog main path, you can change this to "articles" (/articles)
       noindex: false,
       disabled: false,
     },
 
-    list: {
-      pathname: '/articles', // Blog main path, you can change this to "articles" (/articles)
+    post: {
+      permalink: '/%slug%', // Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
       noindex: false,
       disabled: false,
     },
@@ -55,6 +55,7 @@ const CONFIG = {
       disabled: false,
     },
   },
+
 };
 
 export const SITE = { ...CONFIG, blog: undefined };
