@@ -8,6 +8,7 @@ export interface Props {
   class?: string;
   iconClass?: string;
   iconName?: string;
+  theme?: string;
 }
 
 const {
@@ -21,7 +22,7 @@ const {
 
 {
   !(SITE?.defaultTheme && SITE.defaultTheme.endsWith(':only')) && (
-    <button type="button" class={className} aria-label={label} data-aw-toggle-color-scheme>
+    <button id="toggle-theme" type="button" class={className} aria-label={label} data-aw-toggle-color-scheme>
       <Icon name={iconName} class={iconClass} />
     </button>
   )
