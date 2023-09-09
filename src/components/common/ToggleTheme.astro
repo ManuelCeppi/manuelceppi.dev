@@ -23,7 +23,14 @@ const {
 {
   !(SITE?.defaultTheme && SITE.defaultTheme.endsWith(':only')) && (
     <>
-      <button id="toggle-theme-light" type="button" class={className} aria-label={label} data-aw-toggle-color-scheme>
+      <button
+        transition:persist
+        id="toggle-theme-light"
+        type="button"
+        class={className}
+        aria-label={label}
+        data-aw-toggle-color-scheme
+      >
         <Icon name={lightIconName} class={iconClass} />
       </button>
     </>

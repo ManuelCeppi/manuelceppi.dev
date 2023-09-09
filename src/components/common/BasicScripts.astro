@@ -10,6 +10,7 @@ import { SITE } from '~/config.mjs';
       document.documentElement.classList.remove('dark');
     }
   }
+  setTheme();
 
   function setTheme() {
     if ((defaultTheme && defaultTheme.endsWith(':only')) || (!localStorage.theme && defaultTheme !== 'system')) {
@@ -37,7 +38,6 @@ import { SITE } from '~/config.mjs';
     let lastKnownScrollPosition = window.scrollY;
     let ticking = true;
 
-    window.addEventListener('DOMContentLoaded', () => setTheme());
     document.addEventListener('astro:after-swap', () => setTheme());
 
     attachEvent('[data-aw-toggle-menu]', 'click', function (_, elem) {
@@ -52,8 +52,7 @@ import { SITE } from '~/config.mjs';
         return;
       }
       document.documentElement.classList.toggle('dark');
-      localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-      console.log('Theme set to ' + localStorage.theme);
+      localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
     });
 
     attachEvent('[data-aw-social-share]', 'click', function (_, elem) {

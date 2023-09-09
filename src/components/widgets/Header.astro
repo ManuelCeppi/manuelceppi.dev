@@ -58,7 +58,7 @@ const {
       <a class="flex items-center" href={getHomePermalink()}>
         <Logo />
       </a>
-      <div transition:persist class="flex items-center md:hidden">
+      <div class="flex items-center md:hidden">
         {showToggleTheme && <ToggleTheme />}
         <ToggleMenu />
       </div>
@@ -127,7 +127,7 @@ const {
             )
           }
         </div>
-        <div transition:persist class="flex items-center">
+        <div class="flex items-center">
           {showToggleTheme && <ToggleTheme />}
         </div>
         {
