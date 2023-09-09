@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 import Logo from '~/components/Logo.astro';
 import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
@@ -132,14 +132,7 @@ const {
             )
           }
         </div>
-        {
-          showToggleTheme && (
-            <ToggleTheme
-              iconName={localStorage.getItem('theme') == 'dark' ? 'tabler:sun' : 'tabler:sun'}
-              iconClass="w-5 h-5"
-            />
-          )
-        }
+        {showToggleTheme && <ToggleTheme iconName="tabler:sun" iconClass="w-5 h-5" />}
         {
           actions?.length ? (
             <span class="ml-4">

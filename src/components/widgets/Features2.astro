@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 
 interface Item {
   title?: string;
@@ -43,10 +43,7 @@ const {
             )}
 
             {subtitle && (
-              <p
-                class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400"
-                set:html={subtitle}
-              />
+              <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={subtitle} />
             )}
           </div>
         )

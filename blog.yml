@@ -10,7 +10,7 @@ services:
       - ./entrypoint-blog.sh:/entrypoint-blog.sh
     entrypoint: /entrypoint-blog.sh
     ports:
-      - 3000:3000
+      - 3000:4321
     expose: 
       - 3000 
     healthcheck: 
