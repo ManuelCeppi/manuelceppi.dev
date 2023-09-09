@@ -11,15 +11,17 @@ import { SITE } from '~/config.mjs';
     }
   }
 
-  if ((defaultTheme && defaultTheme.endsWith(':only')) || (!localStorage.theme && defaultTheme !== 'system')) {
-    applyTheme(defaultTheme.replace(':only', ''));
-  } else if (
-    localStorage.theme === 'dark' ||
-    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-  ) {
-    applyTheme('dark');
-  } else {
-    applyTheme('light');
+  function setTheme() {
+    if ((defaultTheme && defaultTheme.endsWith(':only')) || (!localStorage.theme && defaultTheme !== 'system')) {
+      applyTheme(defaultTheme.replace(':only', ''));
+    } else if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      applyTheme('dark');
+    } else {
+      applyTheme('light');
+    }
   }
 
   function attachEvent(selector, event, fn) {
@@ -35,6 +37,9 @@ import { SITE } from '~/config.mjs';
     let lastKnownScrollPosition = window.scrollY;
     let ticking = true;
 
+    window.addEventListener('DOMContentLoaded', () => setTheme());
+    document.addEventListener('astro:after-swap', () => setTheme());
+
     attachEvent('[data-aw-toggle-menu]', 'click', function (_, elem) {
       elem.classList.toggle('expanded');
       document.body.classList.toggle('overflow-hidden');
@@ -48,6 +53,7 @@ import { SITE } from '~/config.mjs';
       }
       document.documentElement.classList.toggle('dark');
       localStorage.theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+      console.log('Theme set to ' + localStorage.theme);
     });
 
     attachEvent('[data-aw-social-share]', 'click', function (_, elem) {

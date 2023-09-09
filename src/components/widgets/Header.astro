@@ -31,10 +31,8 @@ export interface Props {
   actions?: Array<ActionLink>;
   isSticky?: boolean;
   showToggleTheme?: boolean;
-  showRssFeed?: boolean;
   position?: string;
   socialLinks: Array<Link>;
-  footNote?: string;
   theme?: string;
 }
 
@@ -42,12 +40,9 @@ const {
   actions = [],
   isSticky = false,
   showToggleTheme = false,
-  showRssFeed = false,
   position = 'center',
   socialLinks = [],
   links = [],
-  footNote = '',
-  theme = 'light',
 } = Astro.props;
 ---
 
@@ -63,7 +58,7 @@ const {
       <a class="flex items-center" href={getHomePermalink()}>
         <Logo />
       </a>
-      <div class="flex items-center md:hidden">
+      <div transition:persist class="flex items-center md:hidden">
         {showToggleTheme && <ToggleTheme />}
         <ToggleMenu />
       </div>
@@ -132,7 +127,9 @@ const {
             )
           }
         </div>
-        {showToggleTheme && <ToggleTheme iconName="tabler:sun" iconClass="w-5 h-5" />}
+        <div transition:persist class="flex items-center">
+          {showToggleTheme && <ToggleTheme />}
+        </div>
         {
           actions?.length ? (
             <span class="ml-4">
