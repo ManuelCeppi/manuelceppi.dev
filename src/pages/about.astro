@@ -1,31 +1,16 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import { fetchPosts } from '~/utils/blog';
-import Hero from '~/components/widgets/Hero.astro';
 import Headline from '~/components/blog/Headline.astro';
 
-// export async function getStaticPaths() {
-//   if (BLOG?.disabled || BLOG?.post?.disabled) return [];
-//   return (await fetchPosts()).map((post) => ({
-//     params: {
-//       blog: post.permalink,
-//     },
-//     props: { post },
-//   }));
-// }
-
 const meta = {
-  title: 'ABOUT.title', // FIXME
-  description: 'ABOUT.description', // FIXME
-  dontUseTitleTemplate: true,
+  title: 'About me',
+  description: 'About me',
 };
 ---
 
 <Layout {meta}>
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
     <Headline subtitle="Work in progress. Stay tuned.">About Me</Headline>
-    <!-- <BlogList posts={page.data} />
-        <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} /> -->
   </section>
 </Layout>

@@ -1,7 +1,7 @@
 import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
-  name: 'Manuel Ceppi 2',
+  name: 'Manuel Ceppi',
 
   origin: 'https://astrowind.vercel.app',
   basePathname: '/',

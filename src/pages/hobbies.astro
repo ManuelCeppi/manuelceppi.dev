@@ -1,29 +1,10 @@
 ---
-import { BLOG } from '~/config.mjs';
-
 import Layout from '~/layouts/PageLayout.astro';
-import ToBlogLink from '~/components/blog/ToBlogLink.astro';
-
-import { getCanonical, getPermalink } from '~/utils/permalinks';
-import { fetchPosts } from '~/utils/blog';
-import { findImage } from '~/utils/images';
-import Hero from '~/components/widgets/Hero.astro';
 import Headline from '~/components/blog/Headline.astro';
 
-// export async function getStaticPaths() {
-//   if (BLOG?.disabled || BLOG?.post?.disabled) return [];
-//   return (await fetchPosts()).map((post) => ({
-//     params: {
-//       blog: post.permalink,
-//     },
-//     props: { post },
-//   }));
-// }
-
 const meta = {
-  title: 'Hobbies - Manuel Ceppi',
+  title: 'Hobbies',
   description: "All the things that i enjoy doing when i'm not coding!",
-  dontUseTitleTemplate: true,
 };
 ---
 

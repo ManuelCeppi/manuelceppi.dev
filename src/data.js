@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import {  getBlogPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -18,6 +18,7 @@ export const headerData = {
       text: 'Contact Me',
       href: '',
     },
+ 
   ],
   socialLinks: [
     { ariaLabel: 'Linkedin', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/manuel-ceppi/' },
