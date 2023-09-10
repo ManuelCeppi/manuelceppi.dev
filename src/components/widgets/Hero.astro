@@ -1,6 +1,7 @@
 ---
-import { Icon } from 'astro-icon/components';
-
+import { Image } from 'astro:assets';
+import splashImage from '../../assets/images/splashImage.jpeg';
+import { slide } from 'astro:transitions';
 interface CallToAction {
   text: string;
   href: string;
@@ -26,78 +27,40 @@ const {
 } = Astro.props;
 ---
 
-<section class="relative md:-mt-[76px]">
-  <div class="absolute inset-0 pointer-events-none" aria-hidden="true"></div>
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
-    <div class="py-12 md:py-20">
-      <div class="text-center pb-10 md:pb-16 max-w-screen-lg mx-auto">
-        {
-          title && (
-            <h1
-              class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200"
-              set:html={title}
-            />
-          )
-        }
-        <div class="max-w-3xl mx-auto">
-          {subtitle && <p class="text-xl text-muted mb-6 dark:text-slate-300" set:html={subtitle} />}
-          <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
-            {
-              callToAction && (
-                <div class="flex w-full sm:w-auto">
-                  {typeof callToAction === 'string' ? (
-                    <Fragment set:html={callToAction} />
-                  ) : (
-                    <a class="btn btn-primary sm:mb-0 w-full" href={callToAction?.href} target="_blank" rel="noopener">
-                      {callToAction?.icon && (
-                        <>
-                          <Icon name={callToAction.icon} class="w-5 h-5 mr-1 -ml-1.5" />
-                          &nbsp;
-                        </>
-                      )}
-                      {callToAction?.text}
-                    </a>
-                  )}
-                </div>
-              )
-            }
-            {
-              callToAction2 && (
-                <div class="flex w-full sm:w-auto">
-                  {typeof callToAction2 === 'string' ? (
-                    <Fragment set:html={callToAction2} />
-                  ) : (
-                    <a class="btn w-full" href={callToAction2?.href}>
-                      {callToAction2?.icon && (
-                        <>
-                          <Icon name={callToAction2.icon} class="w-5 h-5 mr-1 -ml-1.5" />
-                          &nbsp;
-                        </>
-                      )}
-                      {callToAction2.text}
-                    </a>
-                  )}
-                </div>
-              )
-            }
-          </div>
-        </div>
-        {content && <Fragment set:html={content} />}
-      </div>
-      <div>
-        {
-          image && (
-            <div class="relative m-auto max-w-5xl">
-              <div class="relative">
-                <div class="relative h-0 pb-[56.25%] overflow-hidden">
-                  <img class="absolute inset-0 w-full h-full object-cover" src={image} alt="" />
-                </div>
-              </div>
-            </div>
-          )
-        }
-      </div>
-    </div>
+<div class="mx-auto max-w-7xl my-12 w-full px-5 sm:px-8 md:px-14 lg:px-5 flex flex-col lg:flex-row gap-10 lg:gap-12">
+  <div class="absolute w-full lg:w-1/2 inset-y-0 lg:right-0">
+    <span
+      class="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"
+    ></span>
+    <span class="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-primary blur-xl opacity-80"></span>
+  </div><span
+    class="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-primary to-green-400 absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"
+  ></span><div
+    transition:animate={slide({ duration: 500 })}
+    class="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8
+      lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2"
+  >
+    <h1 class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
+           font-bold text-heading-1">
+      Backend Developer, Markets enthusiast and
+      <span
+        class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600"
+        >Cat Lover.
+      </span>
+    </h1>
+    <p class="md:text-lg text-heading-3 mt-8">
+      Hi! I'm Manuel Ceppi, a Backend Developer from Rimini, Italy. I'm currently working at <a
+        href="https://www.spiagge.it/"
+        target="_blank"
+        class="hover:underline">Spiagge.it</a
+      >, a SaaS company that helps beach resorts to manage and automate their business. Below, you can find some of my
+      experiences.
+    </p>
+  </div><div class="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
+    <img
+      src={splashImage.src}
+      alt="Hero image"
+      class="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96"
+    />
   </div>
-</section>
+</div>

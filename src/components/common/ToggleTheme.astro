@@ -23,16 +23,24 @@ const {
 {
   !(SITE?.defaultTheme && SITE.defaultTheme.endsWith(':only')) && (
     <>
-      <button
-        transition:persist
-        id="toggle-theme-light"
-        type="button"
-        class={className}
-        aria-label={label}
-        data-aw-toggle-color-scheme
-      >
+      <button id="toggle-theme-light" type="button" class={className} aria-label={label}>
         <Icon name={lightIconName} class={iconClass} />
       </button>
     </>
   )
 }
+
+<script is:inline define:vars={{ defaultTheme: SITE.defaultTheme }}>
+  // Find our component DOM on the page.
+  const button = document.getElementById('toggle-theme-light');
+
+  button.addEventListener('click', () => changeTheme());
+
+  function changeTheme() {
+    if (defaultTheme.endsWith(':only')) {
+      return;
+    }
+    document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+  }
+</script>
