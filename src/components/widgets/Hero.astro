@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import splashImage from '../../assets/images/splashImage.jpeg';
 import fortechLogo from '../../assets/images/fortech_logo.png';
+import spiaggeLogo from '../../assets/images/spiagge_logo.png';
 import { slide } from 'astro:transitions';
 interface CallToAction {
   text: string;
@@ -29,7 +30,9 @@ const {
 ---
 
 <div>
-  <div class="mx-auto max-w-7xl my-12 w-full px-5 sm:px-8 md:px-14 lg:px-5 flex flex-col lg:flex-row gap-10 lg:gap-12">
+  <div
+    class="mx-auto max-w-7xl my-12 w-full px-5 sm:px-8 md:px-14 lg:px-5 flex flex-col lg:flex-row gap-10 lg:gap-12 overflow-hidden"
+  >
     <div class="absolute w-full lg:w-1/2 inset-y-0 lg:right-0">
       <span
         class="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"
@@ -38,7 +41,6 @@ const {
     </div><span
       class="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-primary to-green-400 absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"
     ></span><div
-      transition:animate={slide({ duration: 500 })}
       class="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8
       lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2"
     >
@@ -56,7 +58,7 @@ const {
         Hi! I'm Manuel Ceppi, a Backend Developer from Rimini, Italy. I'm currently working at <a
           href="https://www.spiagge.it/"
           target="_blank"
-          class="hover:underline">Spiagge.it</a
+          class="hover:underline text-yellow-300">Spiagge.it</a
         >, a SaaS company that helps beach resorts to manage and automate their business. Below, you can find some of my
         experiences.
       </p>
@@ -75,140 +77,64 @@ const {
     </h1>
   </div>
   <!-- Timeline start -->
-  <div class="flex flex-col py-4">
-    <div class="py-3 sm:max-w-xl sm:mx-auto w-full px-2 sm:px-0">
-      <div class="relative text-gray-700 antialiased text-sm font-semibold">
-        <!-- Vertical bar running through middle -->
-        <div class="hidden sm:block w-0.5 bg-blue-300 absolute h-full left-1/2 transform -translate-x-1/2"></div>
-
-        <!-- Left section, set by justify-start and sm:pr-8 -->
-        <div class="mt-6 sm:mt-0 sm:mb-12">
-          <div class="flex flex-col sm:flex-row items-center">
-            <div class="flex justify-start w-full mx-auto items-center">
-              <div class="w-full sm:w-1/2 sm:pr-8">
-                <div>LOGO</div>
-                <div class="p-4 bg-white rounded shadow">
-                  I'll tell you how I became the Prince of a town called Bel Air.
-                </div>
-              </div>
+  <section>
+    <div class="text-white py-8">
+      <div class="container mx-auto w-full h-full">
+        <div class="overflow-hidden">
+          <div
+            class="border-2-2 border-yellow-555 absolute h-full border"
+            style="right: 50%; border: 2px solid #FFFFFF; border-radius: 1%;"
+          >
+          </div>
+          <div
+            class="border-2-1 border-yellow-555 absolute h-full border"
+            style="left: 50%; border: 2px solid #FFFFFF; border-radius: 1%;"
+          >
+          </div>
+          <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+            <div class="order-1 w-5/12"></div>
+            <div class="order-1 w-5/12 px-1 py-4 text-right">
+              <img class="mx-auto rounded-full" src={spiaggeLogo.src} />
+              <p class="mb-3 text-base text-yellow-300">1-6 May, 2021</p>
+              <h4 class="mb-3 font-bold text-lg md:text-2xl">Registration</h4>
+              <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+                Pick your favourite event(s) and register in that event by filling the form corresponding to that event.
+                Its that easy :)
+              </p>
             </div>
           </div>
-        </div>
-
-        <!-- Right section, set by justify-end and sm:pl-8 -->
-        <div class="mt-6 sm:mt-0 sm:mb-12">
-          <div class="flex flex-col sm:flex-row items-center">
-            <div class="flex justify-end w-full mx-auto items-center">
-              <div class="w-full sm:w-1/2 sm:pl-8">
-                <div>LOGO</div>
-
-                <div class="p-4 bg-white rounded shadow">
-                  I'll tell you how I became the Prince of a town called Bel Air.
-                </div>
-              </div>
+          <div class="mb-8 flex justify-between items-center w-full right-timeline">
+            <div class="order-1 w-5/12"></div>
+            <div class="order-1 w-5/12 px-1 py-4 text-left">
+              <img
+                class="mx-auto -mt-36 md:-mt-36"
+                src="https://user-images.githubusercontent.com/54521023/116968861-ef21a000-acd2-11eb-95ac-a34b5b490265.png"
+              />
+              <p class="mb-3 text-base text-yellow-300">6-9 May, 2021</p>
+              <h4 class="mb-3 font-bold text-lg md:text-2xl">Participation</h4>
+              <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+                Participate online. The links for your registered events will be sent to you via email and whatsapp
+                groups. Use those links and show your talent.
+              </p>
             </div>
           </div>
-        </div>
-
-        <!-- Left section, set by justify-start and sm:pr-8 -->
-        <div class="mt-6 sm:mt-0 sm:mb-12">
-          <div class="flex flex-col sm:flex-row items-center">
-            <div class="flex justify-start w-full mx-auto items-center">
-              <div class="sm:w-1/2 sm:pr-8">
-                <div>
-                  <div class="lg:w-1/2 lg:h-auto lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
-                    <div
-                      class="rounded-full bg-blue-500 border-white border-4 w-8 h-8 absolute left-1/2 -translate-y-4 sm:translate-y-0 transform -translate-x-1/2 flex items-center justify-center"
-                    >
-                      <!-- <img
-                    src={fortechLogo.src}
-                    alt="Hero image"
-                    class="lg:absolute lg:w-full relative lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96" -->
-
-                      <!--?xml version="1.0" standalone="no"?-->
-
-                      <svg
-                        version="1.0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="400.000000pt"
-                        height="62.000000pt"
-                        viewBox="0 0 400.000000 62.000000"
-                        preserveAspectRatio="xMidYMid meet"
-                      >
-                        <g
-                          transform="translate(0.000000,62.000000) scale(0.100000,-0.100000)"
-                          fill="#000000"
-                          stroke="none"
-                        >
-                          <path
-                            d="M175 610 c-31 -12 -42 -30 -54 -88 -6 -29 -11 -55 -11 -57 0 -3 124
-                  -5 275 -5 l275 0 5 23 c17 73 25 113 25 125 0 9 -56 12 -247 11 -137 0 -257
-                  -4 -268 -9z"
-                          ></path>
-                          <path
-                            d="M835 598 c-23 -21 -31 -52 -80 -288 -31 -146 -58 -273 -61 -282 -5
-                  -16 3 -18 79 -18 97 0 140 12 154 43 6 12 18 59 28 104 l18 83 82 0 c97 0 121
-                  13 135 75 20 87 22 85 -85 85 -99 0 -105 3 -89 44 5 13 25 16 113 16 l108 0
-                  11 65 c7 35 15 71 18 80 5 13 -19 15 -199 15 -199 0 -207 -1 -232 -22z"
-                          ></path>
-                          <path
-                            d="M3597 598 c-18 -19 -32 -71 -75 -278 -29 -140 -57 -268 -62 -284
-                  l-10 -28 86 3 c111 5 124 18 149 150 24 129 37 159 70 159 14 0 28 -6 31 -14
-                  3 -7 -6 -68 -20 -135 -37 -175 -43 -161 68 -161 l94 0 10 47 c6 27 23 108 38
-                  181 l28 132 -21 28 c-19 26 -25 27 -118 30 -63 2 -102 -1 -111 -9 -19 -15 -18
-                  -5 6 105 11 50 20 91 20 93 0 2 -36 3 -80 3 -71 0 -84 -3 -103 -22z"
-                          ></path>
-                          <path
-                            d="M2310 539 c-46 -16 -92 -37 -102 -47 -11 -11 -31 -86 -56 -212 -46
-                  -226 -45 -245 24 -268 39 -13 167 -9 191 6 8 5 33 93 33 117 0 3 -16 5 -36 5
-                  l-37 0 6 58 c9 87 13 92 62 92 47 0 47 1 60 70 4 19 9 43 11 53 5 14 -2 17
-                  -40 17 -25 0 -46 3 -46 8 1 9 19 91 26 115 7 22 6 21 -96 -14z"
-                          ></path>
-                          <path
-                            d="M1442 439 c-139 -23 -231 -128 -232 -265 0 -117 64 -169 210 -168
-                  186 1 272 83 312 300 21 118 -6 145 -149 143 -48 -1 -112 -5 -141 -10z m72
-                  -164 c-2 -102 -42 -176 -88 -159 -20 8 -22 72 -2 138 18 61 33 78 65 74 24 -3
-                  26 -6 25 -53z"
-                          ></path>
-                          <path
-                            d="M2679 440 c-137 -24 -229 -136 -229 -279 0 -108 62 -156 200 -156
-                  105 0 165 21 214 76 55 60 50 69 -42 69 -66 0 -82 -3 -97 -20 -24 -26 -50 -33
-                  -75 -20 -25 13 -28 65 -4 74 9 3 73 6 144 6 146 0 140 -4 140 93 0 105 -42
-                  148 -155 160 -27 3 -71 2 -96 -3z m81 -119 c18 -35 2 -51 -51 -51 -39 0 -49 3
-                  -49 17 0 46 79 73 100 34z"
-                          ></path>
-                          <path
-                            d="M3199 440 c-135 -23 -229 -136 -229 -273 0 -114 59 -162 200 -162
-                  135 0 216 44 255 138 l15 37 -95 0 c-76 0 -95 -3 -95 -14 0 -8 -11 -28 -24
-                  -43 -20 -23 -28 -26 -43 -17 -25 15 -27 55 -8 134 18 75 41 103 77 98 19 -2
-                  24 -10 26 -41 l3 -38 87 3 87 3 3 31 c5 51 -21 100 -65 122 -46 23 -131 33
-                  -194 22z"
-                          ></path>
-                          <path
-                            d="M1823 408 c-15 -17 -31 -70 -56 -193 -20 -94 -39 -179 -43 -189 -6
-                  -17 -1 -18 78 -15 105 5 122 17 138 98 18 92 39 159 53 168 6 4 34 10 62 13
-                  l50 5 12 50 c19 84 19 85 -33 85 -25 0 -54 -5 -65 -10 -13 -7 -19 -7 -19 0 0
-                  6 -31 10 -78 10 -69 0 -81 -3 -99 -22z"
-                          ></path>
-                          <path
-                            d="M56 220 c-20 -100 -40 -187 -43 -195 -4 -13 30 -15 245 -15 138 0
-                  262 4 276 10 35 13 43 32 76 192 17 79 32 153 35 166 l5 22 -278 0 -278 0 -38
-                  -180z"
-                          ></path>
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="p-4 bg-white rounded shadow">
-                  I'll tell you how I became the Prince of a town called Bel Air.
-                </div>
-              </div>
+          <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
+            <div class="order-1 w-5/12"></div>
+            <div class="order-1 w-5/12 px-1 py-4 text-right">
+              <img
+                class="mx-auto -mt-36 md:-mt-36"
+                src="https://user-images.githubusercontent.com/54521023/116968861-ef21a000-acd2-11eb-95ac-a34b5b490265.png"
+              />
+              <p class="mb-3 text-base text-yellow-300">10 May, 2021</p>
+              <h4 class="mb-3 font-bold text-lg md:text-2xl">Result Declaration</h4>
+              <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
+                The ultimate genius will be revealed by our judging panel on 10th May, 2021 and the resukts will be
+                announced on the whatsapp groups and will be mailed to you.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>

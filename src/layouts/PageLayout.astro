@@ -6,7 +6,6 @@ import Footer from '~/components/widgets/Footer.astro';
 import { headerData, footerData } from '~/data';
 
 import { type MetaSEO } from '~/types';
-import { ViewTransitions } from 'astro:transitions';
 export interface Props {
   meta?: MetaSEO;
 }
@@ -16,7 +15,7 @@ const { meta } = Astro.props;
 
 <Layout {meta}>
   <slot name="header">
-    <Header {...headerData} isSticky showToggleTheme />
+    <Header {...headerData} isSticky />
   </slot>
   <main>
     <slot />
@@ -25,4 +24,3 @@ const { meta } = Astro.props;
     <Footer {...footerData} />
   </slot>
 </Layout>
-<ViewTransitions />
