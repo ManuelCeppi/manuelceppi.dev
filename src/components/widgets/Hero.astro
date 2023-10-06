@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import splashImage from '../../assets/images/splashImage.jpeg';
 import fortechLogo from '../../assets/images/fortech_logo.png';
 import spiaggeLogo from '../../assets/images/spiagge_logo.png';
+import wedoLogo from '../../assets/images/wedo_logo.png';
 import { slide } from 'astro:transitions';
 interface CallToAction {
   text: string;
@@ -106,10 +107,7 @@ const {
           <div class="mb-8 flex justify-between items-center w-full right-timeline">
             <div class="order-1 w-5/12"></div>
             <div class="order-1 w-5/12 px-1 py-4 text-left">
-              <img
-                class="mx-auto -mt-36 md:-mt-36"
-                src="https://user-images.githubusercontent.com/54521023/116968861-ef21a000-acd2-11eb-95ac-a34b5b490265.png"
-              />
+              <img class="mx-auto rounded-full" src={fortechLogo.src} />
               <p class="mb-3 text-base text-yellow-300">6-9 May, 2021</p>
               <h4 class="mb-3 font-bold text-lg md:text-2xl">Participation</h4>
               <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
@@ -121,10 +119,7 @@ const {
           <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
             <div class="order-1 w-5/12"></div>
             <div class="order-1 w-5/12 px-1 py-4 text-right">
-              <img
-                class="mx-auto -mt-36 md:-mt-36"
-                src="https://user-images.githubusercontent.com/54521023/116968861-ef21a000-acd2-11eb-95ac-a34b5b490265.png"
-              />
+              <img class="mx-auto rounded-full" src={wedoLogo.src} />
               <p class="mb-3 text-base text-yellow-300">10 May, 2021</p>
               <h4 class="mb-3 font-bold text-lg md:text-2xl">Result Declaration</h4>
               <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
