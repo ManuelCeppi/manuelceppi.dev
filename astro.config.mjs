@@ -1,3 +1,4 @@
+import i18n from "astro-i18n"
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -35,6 +36,7 @@ export default defineConfig({
   },
 
   integrations: [
+    i18n(),
     tailwind({
       config: {
         applyBaseStyles: false,

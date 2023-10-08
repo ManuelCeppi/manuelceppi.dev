@@ -1,9 +1,10 @@
-import {  getBlogPermalink } from './utils/permalinks';
+import { getBlogPermalink } from './utils/permalinks';
+import { astroI18n, t, l } from 'astro-i18n';
 
 export const headerData = {
   links: [
     {
-      text: 'About Me',
+      text: t('nav.aboutMe'),
       href: '/about',
     },
     // {
@@ -11,14 +12,13 @@ export const headerData = {
     //   href: getBlogPermalink(),
     // },
     {
-      text: 'Hobbies',
+      text: t('nav.hobbies'),
       href: '/hobbies',
     },
     {
-      text: 'Contact Me',
+      text: t('nav.contactMe'),
       href: '',
     },
- 
   ],
   socialLinks: [
     { ariaLabel: 'Linkedin', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/manuel-ceppi/' },

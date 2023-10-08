@@ -1,0 +1,24 @@
+{
+  "nav": {
+    "contactMe": "Contattami",
+    "hobbies": "Hobby",
+    "blog": "Blog",
+    "aboutMe": "Su di me"
+  },
+  "landing": {
+    "splashTitle": "Backend Developer, appassionato del mondo dei mercati azionari e ",
+    "splashColoured": "Amante dei gatti",
+    "splashSubtitle": "Ciao! Mi chiamo Manuel Ceppi, sono un Backend Developer e vengo da Rimini. Attualmente lavoro in Spiagge.it, una startup SaaS che aiuta gli stabilimenti balneari a gestire ed automatizzare il loro business (e ad essere presenti online). Sotto, una lista delle mie esperienze lavorative più significative.",
+    "experiencesTitle": "Le mie esperienze",
+    "spiaggeTitle": "Spiagge.it s.r.l",
+    "spiaggePeriod": "Agosto 2022 - in corso",
+    "spiaggeExperience": "",
+    "fortechTitle": "Fortech s.r.l",
+    "fortechPeriod": "Ottobre 2021 - Agosto 2022",
+    "fortechExperience": "",
+    "wedoTitle": "Wedo s.r.l",
+    "wedoPeriod": "Gennaio 2018 - Ottobre 2021",
+    "wedoExperience": "",
+    "cvDownload": "Scarica CV"
+  }
+}

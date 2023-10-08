@@ -3,6 +3,8 @@ import splashImage from '../../assets/images/splashImage.jpeg';
 import fortechLogo from '../../assets/images/fortech_logo.png';
 import spiaggeLogo from '../../assets/images/spiagge_logo.png';
 import wedoLogo from '../../assets/images/wedo_logo.png';
+import { astroI18n, t, l } from 'node_modules/astro-i18n/dist/src';
+
 interface CallToAction {
   text: string;
   href: string;
@@ -47,19 +49,14 @@ const {
         class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
            font-bold text-heading-1"
       >
-        Backend Developer, Markets enthusiast and
+        {t('landing.splashTitle')}
         <span
           class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600"
-          >Cat Lover.
+          >{t('landing.splashColoured')}.
         </span>
       </h1>
       <p class="md:text-lg text-heading-3 mt-8">
-        Hi! I'm Manuel Ceppi, a Backend Developer from Rimini, Italy. I'm currently working at <a
-          href="https://www.spiagge.it/"
-          target="_blank"
-          class="hover:underline text-yellow-300">Spiagge.it</a
-        >, a SaaS company that helps beach resorts to manage and automate their business. Below, you can find some of my
-        experiences.
+        {t('landing.splashSubtitle')}
       </p>
     </div>
     <div class="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
@@ -72,7 +69,7 @@ const {
   </div>
   <div class="flex justify-center my-4">
     <h1 class="text-xl/tight text-heading-1">
-      <span>My experiences</span>
+      <span>{t('landing.experiencesTitle')}</span>
     </h1>
   </div>
   <!-- Timeline start -->
@@ -94,11 +91,10 @@ const {
             <div class="order-1 w-5/12"></div>
             <div class="order-1 w-5/12 px-1 py-4 text-right">
               <img class="mx-auto rounded-full h-auto max-w-full" src={spiaggeLogo.src} />
-              <p class="mb-3 text-base text-yellow-300">1-6 May, 2021</p>
-              <h4 class="mb-3 font-bold text-lg md:text-2xl">Registration</h4>
+              <p class="mb-3 text-base text-yellow-300">{t('landing.spiaggePeriod')}</p>
+              <h4 class="mb-3 font-bold text-lg md:text-2xl">{t('landing.spiaggeTitle')}</h4>
               <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                Pick your favourite event(s) and register in that event by filling the form corresponding to that event.
-                Its that easy :)
+                {t('landing.spiaggeExperience')}
               </p>
             </div>
           </div>
@@ -106,11 +102,10 @@ const {
             <div class="order-1 w-5/12"></div>
             <div class="order-1 w-5/12 px-1 py-4 text-left">
               <img class="mx-auto rounded-full h-auto max-w-full" src={fortechLogo.src} />
-              <p class="mb-3 text-base text-yellow-300">6-9 May, 2021</p>
-              <h4 class="mb-3 font-bold text-lg md:text-2xl">Participation</h4>
+              <p class="mb-3 text-base text-yellow-300">{t('landing.fortechPeriod')}</p>
+              <h4 class="mb-3 font-bold text-lg md:text-2xl">{t('landing.fortechTitle')}</h4>
               <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                Participate online. The links for your registered events will be sent to you via email and whatsapp
-                groups. Use those links and show your talent.
+                {t('landing.fortechExperience')}
               </p>
             </div>
           </div>
@@ -118,11 +113,10 @@ const {
             <div class="order-1 w-5/12"></div>
             <div class="order-1 w-5/12 px-1 py-4 text-right">
               <img class="mx-auto rounded-full h-auto max-w-full" src={wedoLogo.src} />
-              <p class="mb-3 text-base text-yellow-300">10 May, 2021</p>
-              <h4 class="mb-3 font-bold text-lg md:text-2xl">Result Declaration</h4>
+              <p class="mb-3 text-base text-yellow-300">{t('landing.wedoPeriod')}</p>
+              <h4 class="mb-3 font-bold text-lg md:text-2xl">{t('landing.wedoTitle')}</h4>
               <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                The ultimate genius will be revealed by our judging panel on 10th May, 2021 and the resukts will be
-                announced on the whatsapp groups and will be mailed to you.
+                {t('landing.wedoExperience')}
               </p>
             </div>
           </div>

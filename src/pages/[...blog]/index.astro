@@ -7,7 +7,7 @@ import ToBlogLink from '~/components/blog/ToBlogLink.astro';
 import { getCanonical, getPermalink } from '~/utils/permalinks';
 import { fetchPosts } from '~/utils/blog';
 import { findImage } from '~/utils/images';
-
+export const prerender = true;
 export async function getStaticPaths() {
   if (BLOG?.disabled || BLOG?.post?.disabled) return [];
   return (await fetchPosts()).map((post) => ({
