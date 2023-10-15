@@ -5,7 +5,7 @@ import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
 import { astroI18n, t, l } from 'node_modules/astro-i18n/dist/src';
 import { getHomePermalink, getAsset } from '~/utils/permalinks';
-
+import resume from '../../assets/files/resume.pdf';
 interface Link {
   text?: string;
   href?: string;
@@ -34,6 +34,7 @@ export interface Props {
   position?: string;
   socialLinks: Array<Link>;
   theme?: string;
+  resumeUrl?: string;
 }
 
 const {
@@ -54,10 +55,14 @@ const {
   id="header"
 >
   <div class="py-3 px-3 md:py-3.5 md:px-4 mx-auto w-full md:flex md:justify-between">
-    <div class:list={[{ 'mr-auto': position === 'right' }, 'hidden md:flex justify-between']}>
+    <div class:list={[{ 'mr-auto': position === 'right' }, 'flex justify-between']}>
       <a class="flex items-center" href={getHomePermalink()}>
         <Logo />
       </a>
+      <div class="flex items-center md:hidden">
+        {showToggleTheme && <ToggleTheme />}
+        <ToggleMenu />
+      </div>
     </div>
     <nav
       class="items-center w-full md:w-auto hidden md:flex dark:text-slate-200 h-[calc(100vh-72px)] md:h-auto overflow-y-auto md:overflow-visible md:mx-5"
@@ -85,9 +90,9 @@ const {
           <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
             ><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"></path></svg
           >
-
-          <span>{t('landing.cvDownload')}</span>
+          <a href={getAsset('../../assets/files/resume.pdf')} download>{t('landing.cvDownload')}</a>
         </button>
+
         <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
           {
             socialLinks?.length ? (
@@ -130,13 +135,6 @@ const {
             ''
           )
         }
-      </div>
-      <a class="flex items-center md:hidden" href={getHomePermalink()}>
-        <Logo />
-      </a>
-      <div class="flex ml-auto">
-        {showToggleTheme && <ToggleTheme />}
-        <div class="md:hidden"><ToggleMenu /></div>
       </div>
     </div>
   </div>
