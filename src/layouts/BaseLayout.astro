@@ -14,6 +14,7 @@ export interface Props {
 const { meta = {} } = Astro.props;
 const { language = 'en', textDirection = 'ltr' } = SITE;
 astroI18n.init(Astro);
+astroI18n.langCode = 'en';
 ---
 
 <html lang={language} dir={textDirection} class="2xl:text-[20px]">

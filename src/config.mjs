@@ -1,4 +1,3 @@
-import defaultImage from './assets/images/default.png';
 
 const CONFIG = {
   name: 'Manuel Ceppi',
@@ -9,7 +8,6 @@ const CONFIG = {
 
   title: 'Manuel Ceppi | Pretending to be a Developer',
   description: 'Myself, some tech posts and so on',
-  defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
