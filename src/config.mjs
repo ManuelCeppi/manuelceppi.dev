@@ -9,7 +9,7 @@ const CONFIG = {
   title: 'Manuel Ceppi | Pretending to be a Developer',
   description: 'Myself, some tech posts and so on',
 
-  defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  defaultTheme: 'dark:only', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
   language: 'en',
   textDirection: 'ltr',
