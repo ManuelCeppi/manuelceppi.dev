@@ -29,18 +29,3 @@ const {
     </>
   )
 }
-
-<script is:inline define:vars={{ defaultTheme: SITE.defaultTheme }}>
-  // Find our component DOM on the page.
-  const button = document.getElementById('toggle-theme-light');
-
-  button.addEventListener('click', () => changeTheme());
-
-  function changeTheme() {
-    if (defaultTheme.endsWith(':only')) {
-      return;
-    }
-    document.documentElement.classList.toggle('dark');
-    localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-  }
-</script>

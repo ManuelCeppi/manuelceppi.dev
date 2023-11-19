@@ -19,108 +19,103 @@ export interface Props {
   image?: string | any; // TODO: find HTMLElementProps
   content?: string;
 }
-
-const {
-  title = await Astro.slots.render('title'),
-  subtitle = await Astro.slots.render('subtitle'),
-  content = await Astro.slots.render('content'),
-  callToAction = await Astro.slots.render('callToAction'),
-  callToAction2 = await Astro.slots.render('callToAction2'),
-  image = await Astro.slots.render('image'),
-} = Astro.props;
 ---
 
 <div>
-  <div
-    class="mx-auto max-w-7xl my-12 w-full px-5 sm:px-8 md:px-14 lg:px-5 flex flex-col lg:flex-row gap-10 lg:gap-12 overflow-hidden"
-  >
-    <div class="absolute w-full lg:w-1/2 inset-y-0 lg:right-0">
-      <span
-        class="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"
-      ></span>
-      <span class="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-primary blur-xl opacity-80"></span>
-    </div><span
+  <div class="mx-auto sm:px-8 md:px-14 lg:px-5 items-center flex flex-col overflow-hidden">
+    <!-- <span
       class="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-primary to-green-400 absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"
-    ></span><div
-      class="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8
-      lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2"
-    >
+    ></span> -->
+    <div class="flex-col max-w-4xl mx-auto lg:mx-0 lg:flex-1">
       <h1
         class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
-           font-bold text-heading-1"
+           font-light text-heading-1 text-center md:text-center"
       >
-        {t('landing.splashTitle')}
+        <span>{t('landing.splashFirstTitle')}</span>
+      </h1>
+      <h1
+        class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
+         font-light text-heading-1 text-center md:text-right"
+      >
+        <span>{t('landing.splashSecondTitle')}</span>
+      </h1>
+      <h1
+        class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
+           font-bold text-heading-1 text-center"
+      >
         <span
           class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600"
           >{t('landing.splashColoured')}.
         </span>
       </h1>
-      <p class="md:text-lg text-heading-3 mt-8">
+      <p class="md:text-lg text-heading-3 mt-8 mx-12 md:mx-auto">
         {t('landing.splashSubtitle')}
       </p>
     </div>
-    <div class="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
-      <img
-        src={splashImage.src}
-        alt="Hero image"
-        class="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96"
-      />
+  </div>
+  <!-- About section -->
+  <section class="dark:text-gray-100">
+    <div class="container max-w-5xl px-4 py-12 mx-auto">
+      <div
+        class="text-center mb-14 after:block after:w-full after:h-0.5 after:mt-5 after:rounded-md after:mx-auto after:dark:bg-violet-400"
+      >
+        <h3 class="text-3xl font-light">{t('landing.aboutTitle')}</h3>
+      </div>
     </div>
-  </div>
-  <div class="flex justify-center my-4">
-    <h1 class="text-xl/tight text-heading-1">
-      <span>{t('landing.experiencesTitle')}</span>
-    </h1>
-  </div>
-  <!-- Timeline start -->
-  <section>
-    <div class="text-white py-8">
-      <div class="container mx-auto w-full h-full">
-        <div class="overflow-hidden">
+  </section>
+  <!-- Experiences section -->
+  <section class="dark:text-gray-100">
+    <div class="container max-w-5xl px-4 py-12 mx-auto">
+      <div
+        class="text-center mb-14 after:block after:w-full after:h-0.5 after:mt-5 after:rounded-md after:mx-auto after:dark:bg-violet-400"
+      >
+        <h3 class="text-3xl font-light">{t('landing.experiencesTitle')}</h3>
+      </div>
+      <div class="relative col-span-12 px-4 space-y-6 sm:col-span-9">
+        <div
+          class="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 xl:before:-left-1 before:dark:bg-gray-700"
+        >
           <div
-            class="border-2-2 border-yellow-555 absolute h-full border"
-            style="right: 50%; border: 2px solid #FFFFFF; border-radius: 1%;"
+            class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-400"
           >
+            <h3 class="text-xl font-semibold tracki">Spiagge.it S.r.l</h3>
+            <time class="text-xs tracki uppercase dark:text-gray-400">{t('landing.spiaggePeriod')}</time>
+            <p class="mt-3">
+              Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac
+              ante ipsum primis in faucibus.
+            </p>
           </div>
           <div
-            class="border-2-1 border-yellow-555 absolute h-full border"
-            style="left: 50%; border: 2px solid #FFFFFF; border-radius: 1%;"
+            class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-400"
           >
+            <h3 class="text-xl font-semibold tracki">Fortech S.r.l</h3>
+            <time class="text-xs tracki uppercase dark:text-gray-400">{t('landing.fortechPeriod')}</time>
+            <p class="mt-3">
+              Morbi vulputate aliquam libero non dictum. Aliquam sit amet nunc ut diam aliquet tincidunt nec nec dui.
+              Donec mollis turpis eget egestas sodales.
+            </p>
           </div>
-          <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-            <div class="order-1 w-5/12"></div>
-            <div class="order-1 w-5/12 px-1 py-4 text-right">
-              <img class="mx-auto rounded-full h-auto max-w-full" src={spiaggeLogo.src} />
-              <p class="mb-3 text-base text-yellow-300">{t('landing.spiaggePeriod')}</p>
-              <h4 class="mb-3 font-bold text-lg md:text-2xl">{t('landing.spiaggeTitle')}</h4>
-              <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                {t('landing.spiaggeExperience')}
-              </p>
-            </div>
-          </div>
-          <div class="mb-8 flex justify-between items-center w-full right-timeline">
-            <div class="order-1 w-5/12"></div>
-            <div class="order-1 w-5/12 px-1 py-4 text-left">
-              <img class="mx-auto rounded-full h-auto max-w-full" src={fortechLogo.src} />
-              <p class="mb-3 text-base text-yellow-300">{t('landing.fortechPeriod')}</p>
-              <h4 class="mb-3 font-bold text-lg md:text-2xl">{t('landing.fortechTitle')}</h4>
-              <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                {t('landing.fortechExperience')}
-              </p>
-            </div>
-          </div>
-          <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-            <div class="order-1 w-5/12"></div>
-            <div class="order-1 w-5/12 px-1 py-4 text-right">
-              <img class="mx-auto rounded-full h-auto max-w-full" src={wedoLogo.src} />
-              <p class="mb-3 text-base text-yellow-300">{t('landing.wedoPeriod')}</p>
-              <h4 class="mb-3 font-bold text-lg md:text-2xl">{t('landing.wedoTitle')}</h4>
-              <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                {t('landing.wedoExperience')}
-              </p>
-            </div>
+          <div
+            class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-400"
+          >
+            <h3 class="text-xl font-semibold tracki">Wedo S.r.l</h3>
+            <time class="text-xs tracki uppercase dark:text-gray-400">{t('landing.wedoPeriod')}</time>
+            <p class="mt-3">
+              Suspendisse tincidunt, arcu nec faucibus efficitur, justo velit consectetur nisl, sit amet condimentum
+              lacus orci nec purus. Mauris quis quam suscipit, vehicula felis id, vehicula enim.
+            </p>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact section -->
+  <section class="dark:text-gray-100">
+    <div class="container max-w-5xl px-4 py-12 mx-auto">
+      <div
+        class="text-center mb-14 after:block after:w-full after:h-0.5 after:mt-5 after:rounded-md after:mx-auto after:dark:bg-violet-400"
+      >
+        <h3 class="text-3xl font-light">{t('landing.contactTitle')}</h3>
       </div>
     </div>
   </section>

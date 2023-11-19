@@ -3,13 +3,16 @@
     "contactMe": "Contact me",
     "hobbies": "Hobbies",
     "blog": "Blog",
-    "aboutMe": "About me"
+    "aboutMe": "About"
   },
   "landing": {
-    "splashTitle": "Backend Developer, Markets enthusiast and ",
-    "splashSubtitle": "Hi! I'm Manuel Ceppi, a Backend Developer from Rimini, Italy. I'm currently working at Spiagge.it, a SaaS startup company that helps beach resorts to manage and automate their business. Below, you can find some of my experiences.",
+    "splashFirstTitle": "Backend Developer;",
+    "splashSecondTitle": "Markets enthusiast;",
     "splashColoured": "Cat Lover",
+    "splashSubtitle": "Hi! I'm Manuel Ceppi, a Backend Developer from Rimini, Italy. I'm currently working at Spiagge.it, a SaaS startup company that helps beach resorts to manage and automate their business. Below, you can find some of my experiences.",
     "experiencesTitle": "My experiences",
+    "contactTitle": "Contacts",
+    "aboutTitle": "About me",
     "spiaggeTitle": "Spiagge.it s.r.l",
     "spiaggePeriod": "August 2022 - ongoing",
     "spiaggeExperience": "",

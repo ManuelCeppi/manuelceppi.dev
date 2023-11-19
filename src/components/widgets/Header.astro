@@ -37,14 +37,7 @@ export interface Props {
   resumeUrl?: string;
 }
 
-const {
-  actions = [],
-  isSticky = false,
-  showToggleTheme = false,
-  position = 'center',
-  socialLinks = [],
-  links = [],
-} = Astro.props;
+const { actions = [], showToggleTheme = false, socialLinks = [], links = [] } = Astro.props;
 ---
 
 <header class="sticky top-0 z-40 flex-none mx-auto w-full transition-all ease-in duration-100 scroll" id="header">
@@ -75,19 +68,19 @@ const {
           ))
         }
       </ul>
+      <ul class="md:hidden flex mt-4 px-4 w-full">
+        <button class="bg-transparent inline-flex items-center py-1.5 px-4 border border-[#F3BF3A] rounded-full shadow">
+          <svg class="fill-current text-[#F3BF3A] w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+            ><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"></path></svg
+          >
+          <a href="./manuel_ceppi_resume.pdf" class="text-[#F3BF3A]" download>{t('landing.cvDownload')}</a>
+        </button>
+      </ul>
     </nav>
 
     <div class="md:self-center flex items-center md:mb-0" style="flex: 1 0 0; min-width: 0; justify-content: flex-end;">
       <div class="hidden items-center md:flex">
-        <div class="md:flex md:items-center md:justify-between py-4">
-          <button
-            class="bg-transparent inline-flex items-center py-1.5 px-4 border border-[#F3BF3A] rounded-full shadow transition ease-in-out hover:scale-110 duration-300"
-          >
-            <svg class="fill-current text-[#F3BF3A] w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-              ><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"></path></svg
-            >
-            <a href="./manuel_ceppi_resume.pdf" class="text-[#F3BF3A]" download>{t('landing.cvDownload')}</a>
-          </button>
+        <div class="md:flex md:items-center md:justify-between py-4 mr-4">
           {
             socialLinks?.length ? (
               <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0">
@@ -110,25 +103,14 @@ const {
             )
           }
         </div>
-        {
-          actions?.length ? (
-            <span class="ml-4">
-              {actions.map(({ text, href, type }) => (
-                <a
-                  class:list={[
-                    'btn ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm',
-                    { 'btn-ghost': type === 'ghost', 'btn-primary': type === 'primary' },
-                  ]}
-                  href={href}
-                >
-                  <Fragment set:html={text} />
-                </a>
-              ))}
-            </span>
-          ) : (
-            ''
-          )
-        }
+        <button
+          class="bg-transparent inline-flex items-center py-1.5 px-4 border border-[#F3BF3A] rounded-full shadow transition ease-in-out hover:scale-110 duration-300"
+        >
+          <svg class="fill-current text-[#F3BF3A] w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+            ><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"></path></svg
+          >
+          <a href="./manuel_ceppi_resume.pdf" class="text-[#F3BF3A]" download>{t('landing.cvDownload')}</a>
+        </button>
       </div>
     </div>
   </div>
