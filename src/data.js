@@ -5,11 +5,15 @@ export const headerData = {
   links: [
     {
       text: t('nav.aboutMe'),
-      href: '/about',
+      href: '#about',
+    },
+    {
+      text: t('nav.experiences'),
+      href: '#experiences',
     },
     {
       text: t('nav.contactMe'),
-      href: '',
+      href: '#contact',
     },
   ],
   socialLinks: [

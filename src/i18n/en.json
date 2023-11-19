@@ -3,7 +3,8 @@
     "contactMe": "Contact me",
     "hobbies": "Hobbies",
     "blog": "Blog",
-    "aboutMe": "About"
+    "aboutMe": "About",
+    "experiences": "Experiences"
   },
   "landing": {
     "splashFirstTitle": "Backend Developer;",
@@ -22,6 +23,6 @@
     "wedoTitle": "Wedo s.r.l",
     "wedoPeriod": "January 2018 - October 2021",
     "wedoExperience": "",
-    "cvDownload": "Download Résumé"
+    "cvDownload": "Resume"
   }
 }
