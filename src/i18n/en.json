@@ -10,7 +10,7 @@
     "splashFirstTitle": "Backend Developer;",
     "splashSecondTitle": "Markets enthusiast;",
     "splashColoured": "Cat Lover",
-    "splashSubtitle": "Hi! I'm Manuel Ceppi, a Backend Developer from Rimini, Italy. I'm currently working at Spiagge.it, a SaaS startup company that helps beach resorts to manage and automate their business. Below, you can find some of my experiences.",
+    "splashSubtitle": "Hi! I'm Manuel Ceppi, a Back-end Developer from Rimini, Italy. I'm currently working at Spiagge.it, a SaaS startup company that helps beach resorts to manage and automate their business. Below, you can find some of my experiences.",
     "experiencesTitle": "My experiences",
     "contactTitle": "Get in Touch",
     "aboutTitle": "About me",
@@ -23,6 +23,12 @@
     "wedoTitle": "Wedo s.r.l",
     "wedoPeriod": "January 2018 - October 2021",
     "wedoExperience": "",
-    "cvDownload": "Resume"
+    "cvDownload": "Resume",
+    "aboutMeText": "Hello! My name is Manuel, and i'm Back-end Developer from Rimini, Italy. I'm a passionate developer, always eager to learn new things. I also like markets and reading about finance and investing. I love mangas, animes and my beaufitul black & white cat, Coco. In my free time i like to play the piano, read books and train.",
+    "experiencesText": "My software development career started in 2018, when i joined Wedo s.r.l as a Junior Developer. I worked on a wide range of projects with different technologies, from desktop erps in C# to Cloud applications with .Net Core and Angular (2). Then on 2022 i totally changed my stack, in fact i now work on a PHP environment with Laravel. Below, you can find more details about all the stack which i worked with.",
+    "wedoText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl vitae ipsum. Sed vitae nisl euismod, aliquam nisl vitae, aliquam nisl. Sed vitae nisl euismod, aliquam nisl vitae, aliquam nisl.",
+    "fortechText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl vitae ipsum. Sed vitae nisl euismod, aliquam nisl vitae, aliquam nisl. Sed vitae nisl euismod, aliquam nisl vitae, aliquam nisl.",
+    "spiaggeText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl vitae ipsum. Sed vitae nisl euismod, aliquam nisl vitae, aliquam nisl. Sed vitae nisl euismod, aliquam nisl vitae, aliquam nisl.",
+    "contactMeText": "Feel free to press it if you want to get in touch with me!"
   }
 }
