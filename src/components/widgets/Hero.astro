@@ -23,9 +23,6 @@ export interface Props {
 
 <div>
   <div class="mx-auto sm:px-8 md:px-14 lg:px-5 items-center flex flex-col overflow-hidden">
-    <!-- <span
-      class="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-primary to-green-400 absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"
-    ></span> -->
     <div class="flex-col max-w-4xl mx-auto lg:mx-0 lg:flex-1">
       <h1
         class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
@@ -43,10 +40,8 @@ export interface Props {
         class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
            font-bold text-heading-1 text-center"
       >
-        <span
-          class="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-green-600"
-          >{t('landing.splashColoured')}.
-        </span>
+        <!-- TODO Change -->
+        <span>{t('landing.splashColoured')}.</span>
       </h1>
       <p class="md:text-lg text-heading-3 mt-8 mx-12 md:mx-auto">
         {t('landing.splashSubtitle')}
@@ -57,7 +52,7 @@ export interface Props {
   <section id="about" class="dark:text-gray-100">
     <div class="container max-w-5xl px-4 py-12 mx-auto">
       <div
-        class="text-center mb-14 after:block after:w-full after:h-0.5 after:mt-5 after:rounded-md after:mx-auto after:dark:bg-violet-400"
+        class="text-center mb-14 after:block after:w-full after:h-0.5 after:mt-5 after:rounded-md after:mx-auto after:dark:bg-[#07bfa4]"
       >
         <h3 class="text-3xl font-light">{t('landing.aboutTitle')}</h3>
       </div>
@@ -67,7 +62,7 @@ export interface Props {
   <section id="experiences" class="dark:text-gray-100">
     <div class="container max-w-5xl px-4 py-12 mx-auto">
       <div
-        class="text-center mb-14 after:block after:w-full after:h-0.5 after:mt-5 after:rounded-md after:mx-auto after:dark:bg-violet-400"
+        class="text-center mb-14 after:block after:w-full after:h-0.5 after:mt-5 after:rounded-md after:mx-auto after:dark:bg-[#07bfa4]"
       >
         <h3 class="text-3xl font-light">{t('landing.experiencesTitle')}</h3>
       </div>
@@ -123,10 +118,8 @@ export interface Props {
   <!-- Contact section -->
   <section id="contact" class="dark:text-gray-100">
     <div class="container max-w-5xl px-4 py-12 mx-auto">
-      <div
-        class="text-center mb-14 after:block after:w-full after:h-0.5 after:mt-5 after:rounded-md after:mx-auto after:dark:bg-violet-400"
-      >
-        <h3 class="text-3xl font-light">{t('landing.contactTitle')}</h3>
+      <div class="text-center mb-14 after:block after:w-full after:h-0.5 after:mt-5 after:rounded-md after:mx-auto">
+        <h3 class="text-5xl font-bold">{t('landing.contactTitle')}</h3>
       </div>
     </div>
   </section>
