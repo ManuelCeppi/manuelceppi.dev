@@ -40,8 +40,10 @@ export interface Props {
         class="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight xl:text-6xl/tight
            font-bold text-heading-1 text-center"
       >
-        <!-- TODO Change -->
-        <span>{t('landing.splashColoured')}.</span>
+        <span
+          class="animate-text font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#FF9398] to-[#ECD06F] hover:from-[#ECD06F] hover:to-[#FF9398]"
+          >{t('landing.splashColoured')}.</span
+        >
       </h1>
       <p class="md:text-m text-heading-3 mt-8 mx-12 md:mx-auto text-gray-400">
         {t('landing.splashSubtitle')}
@@ -75,86 +77,152 @@ export interface Props {
           <p class="text-sm md:text-base leading-snug text-gray-400 text-opacity-100">
             {t('landing.experiencesText')}
           </p>
-          <div class="container mx-auto flex flex-col items-start md:flex-row">
-            <div class="ml-0 sticky">
-              <div class="container mx-auto w-full h-full">
-                <div class="relative wrap overflow-hidden p-10 h-full">
-                  <div class="absolute h-full w-1 bg-[#07bfa4]" style="right: 50%;"></div>
-                  <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="order-1 w-5/12 text-right">
-                      <time class="text-xs tracki uppercase dark:text-gray-400">{t('landing.spiaggePeriod')}</time>
-                      <h4 class="mb-3 font-bold text-lg md:text-2xl">{t('landing.spiaggeTitle')}</h4>
-                      <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                        {t('landing.spiaggeText')}
-                      </p>
+          <section class="py-16 lg:py-20">
+            <div class="flex-col justify-center">
+              <div class="relative">
+                <div class="w-full px-4 mx-auto lg:max-w-5xl">
+                  <div class="absolute w-0.5 block h-full transform -translate-x-1/2 bg-gray-600 left-1/2"></div>
+                  <div class="space-y-2 lg:space-y-4">
+                    <!-- LEFT SECTION -->
+                    <div>
+                      <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-start w-full mx-auto">
+                          <div class="w-full lg:w-1/2 lg:pr-8 mt-10 lg:mt-0">
+                            <div class="relative flex-1 bg-[#1F2937] border-b-4 shadow border-gray-700 rounded-3xl">
+                              <div class="absolute inline-block w-4 overflow-hidden -translate-y-1/2 top-7 -right-4">
+                                <div
+                                  class="hidden h-10 origin-bottom-left transform -rotate-45 shadow lg:block bg-[#1F2937]"
+                                >
+                                </div>
+                              </div>
+                              <div class="relative z-20">
+                                <time class="text-xs tracki uppercase text-gray-400">{t('landing.spiaggePeriod')}</time>
+                                <h4 class="mb-3 font-bold text-lg md:text-2xl">{t('landing.spiaggeTitle')}</h4>
+                                <div class="flex flex-wrap items-center">
+                                  <div class="p-4">
+                                    {t('landing.spiaggeText')}
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- icona -->
+                        <div
+                          class="absolute flex items-center justify-center w-8 h-8 transform -translate-x-1/2 bg-transparent rounded-full left-1/2 lg:translate-y-[20px]"
+                        >
+                          <div>
+                            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-600">
+                              <div class="w-4 h-4 bg-gradient-to-r from-[#FF9398] to-[#ECD06F] rounded-full"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="mb-8 flex justify-between items-center w-full right-timeline">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="order-1 w-5/12 text-left">
-                      <time class="text-xs tracki uppercase dark:text-gray-400">{t('landing.fortechPeriod')}</time>
-                      <h4 class="mb-3 font-bold text-lg md:text-2xl">{t('landing.fortechTitle')}</h4>
-                      <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                        {t('landing.fortechText')}
-                      </p>
+                    <!-- Right section -->
+                    <div>
+                      <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-end w-full mx-auto">
+                          <div class="w-full lg:w-1/2 lg:pl-8">
+                            <div
+                              class="relative flex-1 bg-[#1F2937] border-b-4 shadow border-gray-700 rounded-3xl mt-10 lg:mt-0"
+                            >
+                              <div class="absolute inline-block w-4 overflow-hidden -translate-y-1/2 top-12 -left-4">
+                                <div
+                                  class="hidden h-10 origin-top-right transform -rotate-45 shadow lg:block bg-[#1F2937]"
+                                >
+                                </div>
+                              </div>
+                              <div class="relative z-20">
+                                <time class="text-xs uppercase text-gray-400">{t('landing.fortechPeriod')}</time>
+                                <h4 class="mb-3 font-bold text-lg md:text-2xl">{t('landing.fortechTitle')}</h4>
+                                <div class="flex flex-wrap items-center">
+                                  <div class="p-4">
+                                    {t('landing.fortechText')}
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- icona -->
+                        <div
+                          class="absolute flex items-center justify-center w-8 h-8 transform -translate-x-1/2 bg-transparent rounded-full left-1/2 lg:translate-y-[24px]"
+                        >
+                          <div>
+                            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-600">
+                              <div class="w-4 h-4 bg-gradient-to-r from-[#FF9398] to-[#ECD06F] rounded-full"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-                    <div class="order-1 w-5/12"></div>
-                    <div class="order-1 w-5/12 text-right">
-                      <time class="text-xs tracki uppercase dark:text-gray-400">{t('landing.wedoPeriod')}</time>
-                      <h4 class="mb-3 font-bold text-lg md:text-2xl">{t('landing.wedoTitle')}</h4>
-                      <p class="text-sm md:text-base leading-snug text-gray-50 text-opacity-100">
-                        {t('landing.wedoText')}
-                      </p>
+                    <!-- LEFT SECTION -->
+                    <div>
+                      <div class="flex flex-col items-center">
+                        <div class="flex items-center justify-start w-full mx-auto">
+                          <div class="w-full lg:w-1/2 lg:pr-8">
+                            <div
+                              class="relative flex-1 bg-[#1F2937] border-b-4 shadow border-gray-700 rounded-3xl mt-10 lg:mt-0"
+                            >
+                              <div class="absolute inline-block w-4 overflow-hidden -translate-y-1/2 top-7 -right-4">
+                                <div
+                                  class="hidden h-10 origin-bottom-left transform -rotate-45 shadow lg:block bg-[#1F2937]"
+                                >
+                                </div>
+                              </div>
+                              <div class="relative z-20">
+                                <time class="text-xs tracki uppercase text-gray-400">{t('landing.wedoPeriod')}</time>
+                                <h4 class="mb-3 font-bold text-lg md:text-2xl">{t('landing.wedoTitle')}</h4>
+                                <div class="flex flex-wrap items-center">
+                                  <div class="p-4">
+                                    {t('landing.wedoText')}
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- icona -->
+                        <div
+                          class="absolute flex items-center justify-center w-8 h-8 transform -translate-x-1/2 bg-transparent rounded-full left-1/2 lg:translate-y-[20px]"
+                        >
+                          <div>
+                            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-600">
+                              <div class="w-4 h-4 bg-gradient-to-r from-[#FF9398] to-[#ECD06F] rounded-full"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </div>
   </section>
-  <!-- Contact section -->
-  <section id="contact" class="text-gray-100">
-    <div class="container max-w-5xl px-4 py-12 mx-auto text-white hover:text-[#07bfa4]">
-      <div class="text-center mb-14 after:block after:w-full after:h-0.5 after:mt-5 after:rounded-md after:mx-auto">
-        <button class="text-4xl font-bold text-inherit transition ease-in-out hover:scale-110"
-          >{t('landing.contactTitle')}</button
-        >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-8 h-8 mx-auto mt-2 text-inherit animate-bounce"
-        >
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"></path>
-        </svg>
-        <p class="text-xs mt-4 tracki dark:text-gray-400">{t('landing.contactMeText')}</p>
-      </div>
-    </div>
-  </section>
 </div>
-
-<style>
-  .background-animation {
-    -webkit-animation: AnimationName 3s ease infinite;
-    -moz-animation: AnimationName 3s ease infinite;
-    animation: AnimationName 3s ease infinite;
-  }
-
-  @keyframes AnimationName {
-    '0%, 100%': {
-      'background-size':'400%400%','background-position': 'center top';
-    }
-    ,
-                '50%': {
-      'background-size':'200%200%','background-position': 'center center';
-    }
-  }
-</style>
+<!-- Contact section -->
+<section id="contact" class="text-gray-100">
+  <div class="animate-text container max-w-5xl px-4 py-12 mx-auto text-white hover:text-[#FF9398]">
+    <div class="text-center mb-14 after:block after:w-full after:h-0.5 after:mt-5 after:rounded-md after:mx-auto">
+      <button class="text-4xl font-bold text-inherit transition ease-in-out hover:scale-110"
+        >{t('landing.contactTitle')}</button
+      >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-8 h-8 mx-auto mt-2 text-inherit animate-bounce"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18"></path>
+      </svg>
+      <p class="text-xs mt-4 dark:text-gray-400">{t('landing.contactMeText')}</p>
+    </div>
+  </div>
+</section>
