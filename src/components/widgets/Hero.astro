@@ -4,7 +4,12 @@ import laravelImage from '../../../public/images/laravel.png';
 import netCoreImage from '../../../public/images/net_core.png';
 import awsImage from '../../../public/images/aws.png';
 import mySqlImage from '../../../public/images/mysql.png';
+import angularImage from '../../../public/images/angular.png';
 import vueImage from '../../../public/images/vue.png';
+import mongoImage from '../../../public/images/mongo.png';
+import jiraImage from '../../../public/images/jira.png';
+import bitbucketImage from '../../../public/images/bitbucket.png';
+import docker from '../../../public/images/docker.png';
 import { t } from 'node_modules/astro-i18n/dist/src';
 
 interface CallToAction {
@@ -53,14 +58,12 @@ export interface Props {
     </div>
   </div>
   <!-- About section -->
-  <section id="about" class="dark:text-gray-100 mb-36 mt-36">
-    <div
-      class="text-center mb-2 after:block after:w-full after:h-0.5 after:mt-5 after:rounded-md after:mx-auto before:block"
-    >
-      <h3 class="text-3xl font-light">{t('landing.aboutTitle')}</h3>
+  <section id="about" class="text-gray-100 mb-36 mt-36">
+    <div class="text-center">
+      <h3 class="text-2xl font-extrabold">{t('landing.aboutTitle')}</h3>
     </div>
-    <div class="md:flex max-w-5xl mx-auto p-4">
-      <div class="flex-column px-6 text-cente">
+    <div class="block md:flex max-w-5xl mx-auto p-4">
+      <div class="flex-column px-6 text-left">
         <p class="text-lg md:text-md text-heading-3 mx-auto text-gray-400">
           {t('landing.aboutMeText')}
         </p>
@@ -71,128 +74,130 @@ export interface Props {
     </div>
   </section>
   <!-- Experiences section -->
-  <section id="experiences" class="dark:text-gray-100">
-    <div class="container max-w-5xl px-4 mx-auto">
-      <div class="text-center mb-8">
-        <h3 class="text-3xl font-light">{t('landing.experiencesTitle')}</h3>
-        <div>
-          <p class="text-sm md:text-base leading-snug text-gray-400 text-opacity-100">
+  <section id="experiences" class="text-gray-100">
+    <div class="text-center">
+      <h3 class="text-2xl font-extrabold">{t('landing.experiencesTitle')}</h3>
+    </div>
+    <div class="container max-w-5xl mx-auto p-4">
+      <div>
+        <div class="flex-column px-6 text-center">
+          <p class="text-lg md:text-md text-gray-400 text-heading-3">
             {t('landing.experiencesText')}
           </p>
-          <section class="py-16 lg:py-20">
-            <div class="flex-col justify-center">
-              <div class="relative">
-                <div class="w-full px-4 mx-auto lg:max-w-5xl">
-                  <div class="absolute w-0.5 block h-full transform -translate-x-1/2 bg-gray-600 left-1/2"></div>
-                  <div class="space-y-2 lg:space-y-4">
-                    <!-- LEFT SECTION -->
-                    <div>
-                      <div class="flex flex-col items-center">
-                        <div class="flex items-center justify-start w-full mx-auto">
-                          <div class="w-full lg:w-1/2 lg:pr-8 mt-10 lg:mt-0">
-                            <div class="relative flex-1 bg-[#1F2937] border-b-4 shadow border-gray-700 rounded-3xl">
-                              <div class="absolute inline-block w-4 overflow-hidden -translate-y-1/2 top-7 -right-4">
-                                <div
-                                  class="hidden h-10 origin-bottom-left transform -rotate-45 shadow lg:block bg-[#1F2937]"
-                                >
-                                </div>
-                              </div>
-                              <div class="relative z-20">
-                                <time class="text-xs tracki uppercase text-gray-400">{t('landing.spiaggePeriod')}</time>
-                                <h4 class="mb-3 font-bold text-lg md:text-2xl">{t('landing.spiaggeTitle')}</h4>
-                                <div class="flex flex-wrap items-center">
-                                  <div class="p-4">
-                                    {t('landing.spiaggeText')}
-                                  </div>
-                                </div>
+        </div>
+        <section class="py-16 lg:py-20">
+          <div class="flex-col justify-center">
+            <div class="relative">
+              <div class="w-full px-4 mx-auto lg:max-w-5xl">
+                <div class="absolute w-0.5 block h-full transform -translate-x-1/2 bg-gray-600 left-1/2"></div>
+                <div class="space-y-2 lg:space-y-4 text-center">
+                  <!-- LEFT SECTION -->
+                  <div>
+                    <div class="flex flex-col items-center">
+                      <div class="flex items-center justify-start w-full mx-auto">
+                        <div class="w-full lg:w-1/2 lg:pr-8 mt-10 lg:mt-0">
+                          <div class="relative flex-1 bg-[#1F2937] border-b-4 shadow border-gray-700 rounded-3xl">
+                            <div class="absolute inline-block w-4 overflow-hidden -translate-y-1/2 top-7 -right-4">
+                              <div
+                                class="hidden h-10 origin-bottom-left transform -rotate-45 shadow lg:block bg-[#1F2937]"
+                              >
                               </div>
                             </div>
-                          </div>
-                        </div>
-                        <!-- icona -->
-                        <div
-                          class="absolute flex items-center justify-center w-8 h-8 transform -translate-x-1/2 bg-transparent rounded-full left-1/2 lg:translate-y-[20px]"
-                        >
-                          <div>
-                            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-600">
-                              <div class="w-4 h-4 bg-gradient-to-r from-[#FF9398] to-[#ECD06F] rounded-full"></div>
+                            <div class="relative z-20">
+                              <time class="text-xs tracki uppercase text-gray-400">{t('landing.spiaggePeriod')}</time>
+                              <h4 class="mb-3 font-bold text-lg md:text-2xl">{t('landing.spiaggeTitle')}</h4>
+                              <div class="flex flex-wrap items-center">
+                                <div class="p-4">
+                                  {t('landing.spiaggeText')}
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <!-- Right section -->
-                    <div>
-                      <div class="flex flex-col items-center">
-                        <div class="flex items-center justify-end w-full mx-auto">
-                          <div class="w-full lg:w-1/2 lg:pl-8">
-                            <div
-                              class="relative flex-1 bg-[#1F2937] border-b-4 shadow border-gray-700 rounded-3xl mt-10 lg:mt-0"
-                            >
-                              <div class="absolute inline-block w-4 overflow-hidden -translate-y-1/2 top-12 -left-4">
-                                <div
-                                  class="hidden h-10 origin-top-right transform -rotate-45 shadow lg:block bg-[#1F2937]"
-                                >
-                                </div>
-                              </div>
-                              <div class="relative z-20">
-                                <time class="text-xs uppercase text-gray-400">{t('landing.fortechPeriod')}</time>
-                                <h4 class="mb-3 font-bold text-lg md:text-2xl">{t('landing.fortechTitle')}</h4>
-                                <div class="flex flex-wrap items-center">
-                                  <div class="p-4">
-                                    {t('landing.fortechText')}
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- icona -->
-                        <div
-                          class="absolute flex items-center justify-center w-8 h-8 transform -translate-x-1/2 bg-transparent rounded-full left-1/2 lg:translate-y-[24px]"
-                        >
-                          <div>
-                            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-600">
-                              <div class="w-4 h-4 bg-gradient-to-r from-[#FF9398] to-[#ECD06F] rounded-full"></div>
-                            </div>
+                      <!-- icona -->
+                      <div
+                        class="absolute flex items-center justify-center w-8 h-8 transform -translate-x-1/2 bg-transparent rounded-full left-1/2 lg:translate-y-[20px]"
+                      >
+                        <div>
+                          <div class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-600">
+                            <div class="w-4 h-4 bg-gradient-to-r from-[#FF9398] to-[#ECD06F] rounded-full"></div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <!-- LEFT SECTION -->
-                    <div>
-                      <div class="flex flex-col items-center">
-                        <div class="flex items-center justify-start w-full mx-auto">
-                          <div class="w-full lg:w-1/2 lg:pr-8">
-                            <div
-                              class="relative flex-1 bg-[#1F2937] border-b-4 shadow border-gray-700 rounded-3xl mt-10 lg:mt-0"
-                            >
-                              <div class="absolute inline-block w-4 overflow-hidden -translate-y-1/2 top-7 -right-4">
-                                <div
-                                  class="hidden h-10 origin-bottom-left transform -rotate-45 shadow lg:block bg-[#1F2937]"
-                                >
-                                </div>
+                  </div>
+                  <!-- Right section -->
+                  <div>
+                    <div class="flex flex-col items-center">
+                      <div class="flex items-center justify-end w-full mx-auto">
+                        <div class="w-full lg:w-1/2 lg:pl-8">
+                          <div
+                            class="relative flex-1 bg-[#1F2937] border-b-4 shadow border-gray-700 rounded-3xl mt-10 lg:mt-0"
+                          >
+                            <div class="absolute inline-block w-4 overflow-hidden -translate-y-1/2 top-12 -left-4">
+                              <div
+                                class="hidden h-10 origin-top-right transform -rotate-45 shadow lg:block bg-[#1F2937]"
+                              >
                               </div>
-                              <div class="relative z-20">
-                                <time class="text-xs tracki uppercase text-gray-400">{t('landing.wedoPeriod')}</time>
-                                <h4 class="mb-3 font-bold text-lg md:text-2xl">{t('landing.wedoTitle')}</h4>
-                                <div class="flex flex-wrap items-center">
-                                  <div class="p-4">
-                                    {t('landing.wedoText')}
-                                  </div>
+                            </div>
+                            <div class="relative z-20">
+                              <time class="text-xs uppercase text-gray-400">{t('landing.fortechPeriod')}</time>
+                              <h4 class="mb-3 font-bold text-lg md:text-2xl">{t('landing.fortechTitle')}</h4>
+                              <div class="flex flex-wrap items-center">
+                                <div class="p-4">
+                                  {t('landing.fortechText')}
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <!-- icona -->
-                        <div
-                          class="absolute flex items-center justify-center w-8 h-8 transform -translate-x-1/2 bg-transparent rounded-full left-1/2 lg:translate-y-[20px]"
-                        >
-                          <div>
-                            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-600">
-                              <div class="w-4 h-4 bg-gradient-to-r from-[#FF9398] to-[#ECD06F] rounded-full"></div>
+                      </div>
+                      <!-- icona -->
+                      <div
+                        class="absolute flex items-center justify-center w-8 h-8 transform -translate-x-1/2 bg-transparent rounded-full left-1/2 lg:translate-y-[24px]"
+                      >
+                        <div>
+                          <div class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-600">
+                            <div class="w-4 h-4 bg-gradient-to-r from-[#FF9398] to-[#ECD06F] rounded-full"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- LEFT SECTION -->
+                  <div>
+                    <div class="flex flex-col items-center">
+                      <div class="flex items-center justify-start w-full mx-auto">
+                        <div class="w-full lg:w-1/2 lg:pr-8">
+                          <div
+                            class="relative flex-1 bg-[#1F2937] border-b-4 shadow border-gray-700 rounded-3xl mt-10 lg:mt-0"
+                          >
+                            <div class="absolute inline-block w-4 overflow-hidden -translate-y-1/2 top-7 -right-4">
+                              <div
+                                class="hidden h-10 origin-bottom-left transform -rotate-45 shadow lg:block bg-[#1F2937]"
+                              >
+                              </div>
                             </div>
+                            <div class="relative z-20">
+                              <time class="text-xs tracki uppercase text-gray-400">{t('landing.wedoPeriod')}</time>
+                              <h4 class="mb-3 font-bold text-lg md:text-2xl">{t('landing.wedoTitle')}</h4>
+                              <div class="flex flex-wrap items-center">
+                                <div class="p-4">
+                                  {t('landing.wedoText')}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- icona -->
+                      <div
+                        class="absolute flex items-center justify-center w-8 h-8 transform -translate-x-1/2 bg-transparent rounded-full left-1/2 lg:translate-y-[20px]"
+                      >
+                        <div>
+                          <div class="flex items-center justify-center w-8 h-8 rounded-full bg-gray-600">
+                            <div class="w-4 h-4 bg-gradient-to-r from-[#FF9398] to-[#ECD06F] rounded-full"></div>
                           </div>
                         </div>
                       </div>
@@ -201,19 +206,28 @@ export interface Props {
                 </div>
               </div>
             </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
     </div>
   </section>
 </div>
 <!-- Tech stacks section -->
-<section>
-  <div class="text-center flex flex-1 justify-center gap-6 mb-8 p-4">
+<section id="tech-stack">
+  <div class="text-center">
+    <h3 class="text-2xl font-extrabold">{t('landing.techStackTitle')}</h3>
+  </div>
+  <div class="max-w-2xl grid grid-cols-4 col-span-2 justify-items-center gap-6 mb-8 p-12 mx-auto">
     <img src={laravelImage.src} alt="Laravel" class="object-scale-down h-16 w-16" />
     <img src={mySqlImage.src} alt="MySQL" class="object-scale-down h-16 w-16" />
     <img src={vueImage.src} alt="Vue JS" class="object-scale-down h-16 w-16" />
     <img src={awsImage.src} alt="Aws" class="object-scale-down h-16 w-16" />
+    <img src={netCoreImage.src} alt=".Net Core" class="object-scale-down h-16 w-16" />
+    <img src={angularImage.src} alt="Angular" class="object-scale-down h-16 w-16" />
+    <img src={mongoImage.src} alt="MongoDB" class="object-scale-down h-16 w-16" />
+    <img src={jiraImage.src} alt="Jira" class="object-scale-down h-16 w-16" />
+    <img src={bitbucketImage.src} alt="Bitbucket" class="object-scale-down h-16 w-16" />
+    <img src={docker.src} alt="Docker" class="object-scale-down h-16 w-16" />
   </div>
 </section>
 <!-- Contact section -->
@@ -221,7 +235,9 @@ export interface Props {
   <div class="animate-text max-w-5xl px-4 mx-auto">
     <div class="text-center mb-8 after:block after:w-full after:h-0.5 after:mt-5 after:rounded-md after:mx-auto">
       <a
-        href="#"
+        href="mailto:manuel.ceppi6@gmail.com"
+        rel="noopener noreferrer"
+        target="_blank"
         class="group relative inline-block overflow-hidden rounded px-12 py-3 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r bg-white hover:from-[#FF9398] hover:to-[#ECD06F]"
       >
         <span

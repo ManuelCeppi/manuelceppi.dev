@@ -7,10 +7,10 @@
     "experiences": "Experiences"
   },
   "landing": {
-    "splashFirstTitle": "Backend Developer;",
+    "splashFirstTitle": "Back end Developer;",
     "splashSecondTitle": "Markets enthusiast;",
     "splashColoured": "Cat Lover",
-    "splashSubtitle": "Hi! I'm Manuel Ceppi, a Back-end Developer from Rimini, Italy. I'm currently working at Spiagge.it, a SaaS startup company that helps beach resorts to manage and automate their business. Below, you can find some of my experiences.",
+    "splashSubtitle": "Hi! I'm Manuel Ceppi, a Back end Developer from Rimini, Italy. I'm currently working at Spiagge.it, a SaaS startup company that helps beach resorts to manage and automate their business. Below, you can find some of my experiences.",
     "experiencesTitle": "My experiences",
     "contactTitle": "Get in Touch",
     "aboutTitle": "About me",
@@ -24,11 +24,12 @@
     "wedoPeriod": "January 2018 - October 2021",
     "wedoExperience": "",
     "cvDownload": "Resume",
-    "aboutMeText": "Hello! My name is Manuel, and i'm Back-end Developer from Rimini, Italy. I'm a passionate developer, always eager to learn new things. I also like markets and reading about finance and investing. I love mangas, animes and my beaufitul black & white cat, Coco. In my free time i like to play the piano, read books and train.",
+    "aboutMeText": "Hello! My name is Manuel, and i'm a Back end Developer from Rimini, Italy. I'm a passionate developer, always eager to learn new things. I also like markets and reading about finance and investing. I love mangas, animes and my beaufitul black & white cat, Coco. In my free time i like to play the piano, read books, train and ride my motorbike.",
     "experiencesText": "My software development career started in 2018, when i joined Wedo s.r.l as a Junior Developer. I worked on a wide range of projects with different technologies, from desktop erps in C# to Cloud applications with .Net Core and Angular (2). Then on 2022 i totally changed my stack, in fact i now work on a PHP environment with Laravel. Below, you can find more details about all the stack which i worked with.",
-    "wedoText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl vitae ipsum. Sed vitae nisl euismod, aliquam nisl vitae, aliquam nisl. Sed vitae nisl euismod, aliquam nisl vitae, aliquam nisl.",
-    "fortechText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl vitae ipsum. Sed vitae nisl euismod, aliquam nisl vitae, aliquam nisl. Sed vitae nisl euismod, aliquam nisl vitae, aliquam nisl.",
-    "spiaggeText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl vitae aliquam ultricies, nunc nisl ultricies nunc, vitae aliquam nisl nisl vitae ipsum. Sed vitae nisl euismod, aliquam nisl vitae, aliquam nisl. Sed vitae nisl euismod, aliquam nisl vitae, aliquam nisl.",
-    "contactMeText": "Feel free to press it if you want to get in touch with me!"
+    "wedoText": "At wedo, i mainly worked as a consultant for different IT businesses in different projects; Different projects also means different technologies and stacks:I've put myself in mobile android native development, web development and desktop development; Furthermore, this kind of experience taught to me how to work in several teams with different people. You can find all the projects in detail in my resume.",
+    "fortechText": "After leaving IT consultancy, i wanted join a product based IT business. In Fortech, i had the opportunity to work in a project for the biggest petrol company in italy, Eni. The project was called NonOilManager, and basically was a cash desk and warehouse management web application, built with Angular and .Net core. I was a full stack in this project, so i've worked with both the technologies.",
+    "spiaggeText": "In August 2022, I had the opportunity to have my first experience in a Startup company, so I joined Spiagge.it. I was super excited about this new chapter in my life! Here, i completely changed my tech stack: i've started as a back end developer with laravel, so i had to learn a new language (PHP) and a new framework; I finally started to work with Docker and have a deeper look to infrastructures and all the AWS services that are concerned (CloudWatch, S3, RDS, EC2, ecc); I really had to push my self beyond my limits! I also started to follow more seriously the Agile (SCRUM) framework, with its different ceremonies and interaction with the Product Team and all the other departments. I also have the opportunity to work with some of the most skilled people that i've ever met in my life. Startup experiences really are something else!  ",
+    "contactMeText": "Feel free to press it if you want to get in touch with me!",
+    "techStackTitle": "Frameworks and technologies i've worked with so far" 
   }
 }
