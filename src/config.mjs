@@ -1,4 +1,3 @@
-
 const CONFIG = {
   name: 'Manuel Ceppi',
 
@@ -7,7 +6,7 @@ const CONFIG = {
   trailingSlash: false,
 
   title: 'Manuel Ceppi',
-  description: 'Myself, some tech posts and so on',
+  description: 'Myself, some tech stuff and so on. Trying to be a better dev every day (or pretending to).',
 
   defaultTheme: 'dark:only', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
