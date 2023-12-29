@@ -6,7 +6,7 @@ const CONFIG = {
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'Manuel Ceppi | Pretending to be a Developer',
+  title: 'Manuel Ceppi',
   description: 'Myself, some tech posts and so on',
 
   defaultTheme: 'dark:only', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"

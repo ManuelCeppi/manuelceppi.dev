@@ -3,19 +3,14 @@ import { Icon } from 'astro-icon/components';
 import Logo from '~/components/Logo.astro';
 import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
-import { astroI18n, t, l } from 'node_modules/astro-i18n/dist/src';
-import { getHomePermalink, getAsset } from '~/utils/permalinks';
-import resume from '../../assets/files/resume.pdf';
+import { t } from 'node_modules/astro-i18n/dist/src';
+import { getHomePermalink } from '~/utils/permalinks';
+
 interface Link {
   text?: string;
   href?: string;
   ariaLabel?: string;
   icon?: string;
-}
-
-interface Links {
-  title?: string;
-  links: Array<Link>;
 }
 
 interface ActionLink extends Link {
@@ -37,7 +32,7 @@ export interface Props {
   resumeUrl?: string;
 }
 
-const { actions = [], showToggleTheme = false, socialLinks = [], links = [] } = Astro.props;
+const { showToggleTheme = false, socialLinks = [], links = [] } = Astro.props;
 ---
 
 <header class="sticky top-0 z-40 flex-none mx-auto w-full transition-all ease-in duration-100 scroll" id="header">
