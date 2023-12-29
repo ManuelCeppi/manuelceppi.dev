@@ -1,5 +1,5 @@
 ---
-import splashImage from '../../../public/images/hero.png';
+import splashImage from '../../../public/images/splash_image.jpeg';
 import laravelImage from '../../../public/images/laravel.png';
 import netCoreImage from '../../../public/images/net_core.png';
 import awsImage from '../../../public/images/aws.png';
@@ -61,15 +61,19 @@ export interface Props {
   <section id="about" class="text-gray-100 mb-36 mt-36">
     <div class="text-center">
       <h3 class="text-2xl font-extrabold">{t('landing.aboutTitle')}</h3>
-    </div>
-    <div class="block md:flex max-w-5xl mx-auto p-4">
-      <div class="flex-column px-6 text-left">
-        <p class="text-lg md:text-md text-heading-3 mx-auto text-gray-400">
-          {t('landing.aboutMeText')}
-        </p>
-      </div>
-      <div class="flex-column p-4">
-        <img src={splashImage.src} alt="hero" class="w-full h-full" />
+      <div class="block md:flex max-w-xs md:max-w-3xl m-auto p-4">
+        <div class="flex flex-col justify-center items-center">
+          <p class="text-lg text-gray-400 text-left">
+            {t('landing.aboutMeText')}
+          </p>
+        </div>
+        <div class="bg-gradient-to-r from-[#FF9398] to-[#ECD06F] rounded-3xl mt-4">
+          <img
+            src={splashImage.src}
+            alt="image"
+            class="-translate-y-2 -translate-x-2 transition-all ease-in-out hover:-translate-x-4 hover:-translate-y-4 rounded-3xl"
+          />
+        </div>
       </div>
     </div>
   </section>
