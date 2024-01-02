@@ -1,5 +1,5 @@
-import { getBlogPermalink } from './utils/permalinks';
-import { astroI18n, t, l } from 'astro-i18n';
+
+import {  t} from 'astro-i18n';
 
 export const headerData = {
   links: [
