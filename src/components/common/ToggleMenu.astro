@@ -1,6 +1,5 @@
 ---
 import { Icon } from 'astro-icon/components';
-import { SITE } from '~/config.mjs';
 
 export interface Props {
   label?: string;
@@ -18,20 +17,6 @@ const {
 } = Astro.props;
 ---
 
-<button id="toggle-menu" type="button" class={className} aria-label={label}>
+<button type="button" class={className} aria-label={label} data-aw-toggle-menu>
   <Icon name={iconName} class={iconClass} />
 </button>
-
-<script is:inline define:vars={{ defaultTheme: SITE.defaultTheme }}>
-  // Find our component DOM on the page.
-  const button = document.getElementById('toggle-menu');
-
-  button.addEventListener('click', () => toggleHamburger());
-
-  function toggleHamburger() {
-    button.classList.toggle('expanded');
-    document.body.classList.toggle('overflow-hidden');
-    document.getElementById('header')?.classList.toggle('h-screen');
-    document.querySelector('#header nav')?.classList.toggle('hidden');
-  }
-</script>

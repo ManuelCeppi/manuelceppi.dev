@@ -1,7 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
 import Logo from '~/components/Logo.astro';
-import ToggleTheme from '~/components/common/ToggleTheme.astro';
 import ToggleMenu from '~/components/common/ToggleMenu.astro';
 import { t } from 'node_modules/astro-i18n/dist/src';
 import { getHomePermalink } from '~/utils/permalinks';
@@ -32,7 +31,7 @@ export interface Props {
   resumeUrl?: string;
 }
 
-const { showToggleTheme = false, socialLinks = [], links = [] } = Astro.props;
+const { socialLinks = [], links = [] } = Astro.props;
 ---
 
 <header class="sticky top-0 z-40 flex-none mx-auto w-full transition-all ease-in duration-50 scroll" id="header">
@@ -42,7 +41,6 @@ const { showToggleTheme = false, socialLinks = [], links = [] } = Astro.props;
         <Logo />
       </a>
       <div class="flex items-center md:hidden">
-        {showToggleTheme && <ToggleTheme />}
         <ToggleMenu />
       </div>
     </div>

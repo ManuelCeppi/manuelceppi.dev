@@ -1,7 +1,7 @@
 const CONFIG = {
   name: 'Manuel Ceppi',
 
-  origin: 'https://astrowind.vercel.app',
+  origin: 'https://manuelceppi.dev',
   basePathname: '/',
   trailingSlash: false,
 

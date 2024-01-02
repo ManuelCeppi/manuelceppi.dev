@@ -17,7 +17,7 @@ const defaultImage = '/assets/images/default.png';
 
 const {
   title = SITE.name,
-  description = '',
+  description = SITE.description,
   image: _image = defaultImage,
 
   canonical = getCanonical(String(Astro.url.pathname)),
