@@ -20,6 +20,8 @@ import { SITE } from '~/config.mjs';
 
     attachEvent('#header nav', 'click', function () {
       document.querySelector('[data-aw-toggle-menu]')?.classList.remove('expanded');
+      document.getElementById('close-icon')?.classList.add('hidden');
+      document.getElementById('menu-icon')?.classList.remove('hidden');
       document.body.classList.remove('overflow-hidden');
       document.getElementById('header')?.classList.remove('h-screen');
       document.querySelector('#header nav')?.classList.add('hidden');
@@ -27,6 +29,8 @@ import { SITE } from '~/config.mjs';
 
     attachEvent('[data-aw-toggle-menu]', 'click', function (_, elem) {
       elem.classList.toggle('expanded');
+      document.getElementById('close-icon')?.classList.toggle('hidden');
+      document.getElementById('menu-icon')?.classList.toggle('hidden');
       document.body.classList.toggle('overflow-hidden');
       document.getElementById('header')?.classList.toggle('h-screen');
       document.querySelector('#header nav')?.classList.toggle('hidden');
