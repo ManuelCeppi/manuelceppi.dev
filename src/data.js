@@ -18,7 +18,6 @@ export const headerData = {
   ],
   socialLinks: [
     { ariaLabel: 'Linkedin', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/manuel-ceppi/' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/m_ceppi/' },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/ManuelCeppi' },
   ],
 };
@@ -27,7 +26,6 @@ export const footerData = {
   links: [],
   socialLinks: [
     { ariaLabel: 'Linkedin', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/manuel-ceppi/' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/m_ceppi/' },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/ManuelCeppi' },
   ],
 };
